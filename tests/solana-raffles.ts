@@ -6,7 +6,7 @@ import idl from '../target/idl/solana_raffles.json';
 import { ASSOCIATED_TOKEN_PROGRAM_ID, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { PublicKey, SYSVAR_RENT_PUBKEY } from "@solana/web3.js";
 
-const programId = '4ZEPy6oo8oHzbU6bkiY2m8pLb7aNzyzZaMpAZ6CeZQQf'
+const programId = 'bhEzYEpMDxas9VV85s85KsnzY4nhCvJaRXW23hN7Sty'
 
 describe("solana-raffles", () => {
   // Configure the client to use the local cluster.

@@ -64,6 +64,7 @@ const Create: NextPage = () => {
 
   const handleCreate = async () => {
     setLoading(true);
+    debugger
     try {
       if (!program) return console.log('No Program');
       if (!wallet) return console.log('No wallet connected');
@@ -114,7 +115,7 @@ const Create: NextPage = () => {
       const tokenInfo = await getTokenInfo(new PublicKey(token));
       const entry_fee = getFeeWithDecimal(tokenInfo, parseFloat(fee));
 
-      const image_url: string = image == '' ? 'https://i.ibb.co/whcrbrJ/blank.png' : await uploadImage(image);
+      const image_url: string = image == '' ? 'https://i.ibb.co/w04Prt6/c1f64245afb2.gif' : await uploadImage(image);
 
       const raffle = Keypair.generate();
       const instruction = await createRaffle(

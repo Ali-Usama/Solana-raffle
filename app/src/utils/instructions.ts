@@ -17,7 +17,7 @@ export const createRaffle = async (
     winners: number,
     mint: PublicKey
 ) => {
-
+    debugger
     const ticket_price = new BN(fee);
     const ends_at = new BN(ends)
 

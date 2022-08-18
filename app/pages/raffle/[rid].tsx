@@ -51,6 +51,7 @@ const Raffle: NextPage = () => {
   const [winners, setWinners] = useState<JSX.Element[]>();
 
   const [tokenInfo, setTokenInfo] = useState<TokenDataType | null>(null);
+  debugger
 
   useEffect(() => {
     if (!data) return;
@@ -62,8 +63,11 @@ const Raffle: NextPage = () => {
   }, [data]);
 
   const getAndSetRaffle = async () => {
+    debugger
     if (!program || !rid) return;
+    debugger
     try {
+      debugger
       const raffle = await program.program.account.raffle.fetch(
         new PublicKey(rid)
       );
@@ -195,6 +199,7 @@ const Raffle: NextPage = () => {
   };
 
   const handleClose = async () => {
+    debugger
     setWaiting(true);
     try {
       if (!program) return console.log("No Program");

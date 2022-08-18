@@ -18,7 +18,8 @@ export const ContractContext = createContext<WorkSpace | null>(null);
 const preflightCommitment = "processed";
 const commitment = "processed";
 const programID = new PublicKey(idl.metadata.address);
-const connection = new Connection('https://ssc-dao.genesysgo.net/');
+const connection = new Connection("https://api.devnet.solana.com");
+debugger
 
 export const ContractProvider: FC<any> = ({ children }) => {
   const wallet: any = useAnchorWallet();

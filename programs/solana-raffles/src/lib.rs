@@ -3,7 +3,7 @@ use anchor_spl::token::{self};
 use anchor_spl::associated_token::AssociatedToken;
 use anchor_spl::token::*;
 
-declare_id!("4ZEPy6oo8oHzbU6bkiY2m8pLb7aNzyzZaMpAZ6CeZQQf");
+declare_id!("bhEzYEpMDxas9VV85s85KsnzY4nhCvJaRXW23hN7Sty");
 
 
 #[program]
@@ -117,7 +117,7 @@ pub struct CreateRaffle<'info> {
     #[account(
         init,
         payer = authority,
-        space = 8 + Raffle::LEN
+        space = 800 + Raffle::LEN
     )]
     pub raffle: Box<Account<'info, Raffle>>,
 
@@ -147,7 +147,7 @@ pub struct CreateTicket<'info> {
     #[account(
         init,
         payer = participant,
-        space = 8 + Ticket::LEN
+        space = 800 + Ticket::LEN
     )]
     pub ticket: Box<Account<'info, Ticket>>,
 

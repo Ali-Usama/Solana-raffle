@@ -24,8 +24,8 @@ require("../styles/globals.scss");
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
 
-  const network = WalletAdapterNetwork.Mainnet;
-  const endpoint = 'https://ssc-dao.genesysgo.net/'
+  const network = WalletAdapterNetwork.Devnet;
+  const endpoint = 'https://api.devnet.solana.com'
   const wallets = useMemo(
     () => [
       new PhantomWalletAdapter(),
